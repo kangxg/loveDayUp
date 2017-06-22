@@ -1,0 +1,77 @@
+//
+//  AXPBasic.h
+//  AXPBasic
+//
+//  Created by Li Kaining on 16/8/8.
+//  Copyright © 2016年 DeveloperLx. All rights reserved.
+//
+
+#ifndef AXPBasic_h
+#define AXPBasic_h
+
+
+#endif /* AXPBasic_h */
+
+#define kWIDTH [UIScreen mainScreen].bounds.size.width
+#define kHEIGHT [UIScreen mainScreen].bounds.size.height
+
+#define AXPRandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+
+#define kAXPPopWidth 400
+#define kAXPPopHeight 290
+
+#define kAXPPopMargin 35
+#define kAXPPopViewCellDefalutCount 15
+
+#define kAXPWhiteboardManagerWidth 125
+#define kAXPWhiteboardManagerHeight 704
+
+#define kAXPMAINCOLORc1 [UIColor colorWithHexString:@"#4aacee"]
+#define kAXPMAINCOLORc2 [UIColor colorWithHexString:@"#2693dc"]
+#define kAXPMAINCOLORc3 [UIColor colorWithHexString:@"#eeeeee"]
+#define kAXPMAINCOLORc4 [UIColor colorWithHexString:@"#d8d8d8"]
+#define kAXPMAINCOLORc5 [UIColor colorWithHexString:@"#efeff4"]
+#define kAXPMAINCOLORc6 [UIColor colorWithHexString:@"#c8c7cc"]
+#define kAXPMAINCOLORc7 [UIColor colorWithHexString:@"#b4b4b4"]
+#define kAXPMAINCOLORc8 [UIColor colorWithHexString:@"#7b78f8"]
+#define kAXPMAINCOLORc9 [UIColor colorWithHexString:@"#0e98f4"]
+#define kAXPMAINCOLORc10 [UIColor colorWithHexString:@"#21c7d3"]
+#define kAXPMAINCOLORc11 [UIColor colorWithHexString:@"#94d40b"]
+#define kAXPMAINCOLORc12 [UIColor colorWithHexString:@"#f2b922"]
+#define kAXPMAINCOLORc13 [UIColor colorWithHexString:@"#ee5162"]
+#define kAXPMAINCOLORc14 [UIColor colorWithHexString:@"#f74711"]
+#define kAXPMAINCOLORc15 [UIColor colorWithHexString:@"#303030"]
+#define kAXPMAINCOLORc16 [UIColor colorWithHexString:@"#f0f0f0"]
+#define kAXPMAINCOLORc17 [UIColor colorWithHexString:@"#fafafa"]
+#define kAXPMAINCOLORc1_t80 [UIColor colorWithHexString:@"#cb4aacee"]
+#define kAXPMAINCOLORc16_t80 [UIColor colorWithRed:240/255.0 green:240/240.0 blue:255/255.0 alpha:203/255.0]
+
+#define kAXPLINECOLORl1 [UIColor colorWithHexString:@"#d8d8d8"]
+#define kAXPLINECOLORl2 [UIColor colorWithHexString:@"#a7a7ab"]
+#define kAXPLINECOLORl3 [UIColor colorWithHexString:@"#c8c7cc"]
+#define kAXPLINECOLORl4 [UIColor colorWithHexString:@"#4aacee"]
+#define kAXPLINECOLORl5 [UIColor colorWithHexString:@"#949494"]
+#define kAXPLINECOLORl6 [UIColor colorWithHexString:@"#4a4a4a"]
+#define kAXPLINECOLORl7 [UIColor colorWithHexString:@"#f79021"]
+#define kAXPLINECOLORl7_t40 [UIColor colorWithHexString:@"#65f79021"]
+
+#define kAXPTEXTCOLORf1 [UIColor colorWithHexString:@"#555555"]
+#define kAXPTEXTCOLORf2 [UIColor colorWithHexString:@"#888888"]
+#define kAXPTEXTCOLORf3 [UIColor colorWithHexString:@"#aaaaaa"]
+#define kAXPTEXTCOLORf4 [UIColor colorWithHexString:@"#4aacee"]
+#define kAXPTEXTCOLORf5 [UIColor colorWithHexString:@"#8e8e93"]
+#define kAXPTEXTCOLORf6 [UIColor colorWithHexString:@"#f74711"]
+
+#define kAXPCOLORwhite [UIColor colorWithHexString:@"#ffffff"]
+#define kAXPCOLORblack [UIColor colorWithHexString:@"#000000"]
+#define kAXPCOLORblack_t40 [UIColor colorWithHexString:@"#65000000"]
+#define kAXPCOLORblack_t60 [UIColor colorWithRed:0/255.0 green:0/240.0 blue:0/255.0 alpha:153/255.0]
+
+#define buttonTagBase 10000
+
+#define kColorName @"colorName"
+#define kColor @"color"
+
+#define kApexName @"apexName"
+#define kApexStyle @"apexStyle"
+

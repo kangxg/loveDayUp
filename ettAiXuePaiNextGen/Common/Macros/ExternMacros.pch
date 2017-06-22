@@ -1,0 +1,154 @@
+//
+//  ExternMacros.pch
+//  ettAiXuePaiNextGen
+//
+//  Created by zhaiyingwei on 16/9/13.
+//  Copyright © 2016年 Etiantian. All rights reserved.
+//
+
+
+#ifndef ExternMacros_pch
+#define ExternMacros_pch
+
+
+
+//===========================//
+/********定义开始*************/
+
+/**
+ *  @author LiuChuanan, 17-03-31 13:42:57
+ *  
+ *  @brief 新配置两个环境
+ *
+ *  branch origin/bugfix/addTwoScheme-InPushLargeCourseware
+ *   
+ *  Epic   origin/bugfix/Epic-PushLargeCourseware-0331
+ * 
+ *  @since 
+ */
+
+/** 环境说明
+                     有product的是生产环境,没有则是测试环境
+                     有noProtect的是没有保护模式,没有则是保护模式
+                     有Debug的是调试模式,没有则是发布模式
+           
+                                             有崩溃保护(名字中无noProtect)
+                     测试环境(名字中无product){
+                                             无崩溃保护(名字中有noProtect)
+ Debug(名字中有Debug) {                                                     签名都是Ad Hoc
+                                             有崩溃保护(名字中无noProtect)
+                     生产环境(名字中有product){
+                                             无崩溃保护(名字中有noProtect)
+**/
+/*---------------------------------------环境分割线--------------------------------------*/
+//Debug  b 有保护 测试环境
+#ifdef DEBUG
+#import "Common.pch"
+#define thisScheme @"DebugScheme"
+
+
+//学生默认账号
+#define kStudentAccount @"AXPC@ett.com"
+#define kStudentPassword @"1111"
+
+#define OPENTHESINGNALCAPTURE  
+//测试环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadtios/"
+#define GET_TOKEN @"http://i2.m.etiantian.com:48081/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+
+
+/*---------------------------------------环境分割线--------------------------------------*/
+//DebugNoProtect debug 没有保护 测试环境
+#elif DebugNoProtect
+#import "Common.pch"
+#define thisScheme @"DebugNoProtectScheme"
+
+//学生默认账号
+#define kStudentAccount @"AXPC@ett.com"
+#define kStudentPassword @"1111"
+
+//测试环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadtios/"
+#define GET_TOKEN @"http://i2.m.etiantian.com:48081/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+
+/*---------------------------------------环境分割线--------------------------------------*/
+//DebugProduct  b 有保护 生产环境
+#elif DebugProduct
+#import "Common.pch"
+#define thisScheme @"DebugProductScheme"
+#define OPENTHESINGNALCAPTURE
+
+
+//学生默认账号
+#define kStudentAccount @"AXPC@ett.com"
+#define kStudentPassword @"a11111"
+
+//生产环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadios/"
+#define GET_TOKEN @"http://i.im.etiantian.net/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+
+
+/*---------------------------------------环境分割线--------------------------------------*/
+//DebugProductNoProtect 没有保护 生产环境
+#elif DebugProductNoProtect
+#import "Common.pch"
+#define thisScheme @"DebugProductNoProtectScheme"
+
+
+//学生默认账号
+#define kStudentAccount @"AXPC@ett.com"
+#define kStudentPassword @"a11111"
+
+//生产环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadios/"
+#define GET_TOKEN @"http://i.im.etiantian.net/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+
+/*---------------------------------------环境分割线--------------------------------------*/
+//ReleaseProduct b 发布模式 生产环境 有保护
+#elif ReleaseProduct
+#import "Common.pch"
+#define thisScheme @"ReleaseProductScheme"
+#define OPENTHESINGNALCAPTURE 
+//学生默认账号
+#define kStudentAccount @""
+#define kStudentPassword @""
+//生产环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadios/"
+#define GET_TOKEN @"http://i.im.etiantian.net/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+
+/*---------------------------------------环境分割线--------------------------------------*/
+//Release 发布模式 测试环境  没有保护
+#else
+#import "Common.pch"
+#define thisScheme @"ReleaseScheme"
+//学生默认账号
+#define kStudentAccount @""
+#define kStudentPassword @""
+
+//测试环境
+#define SERVER_HOST @"http://school.etiantian.com/aixuepadtios/"
+#define GET_TOKEN @"http://i2.m.etiantian.com:48081/app-common-service/getAppToken.do"
+/*---------------------------------------环境分割线--------------------------------------*/
+
+
+#endif
+//===========================//
+/********定义结束*************/
+
+
+#endif /* ExternMacros_pch */
